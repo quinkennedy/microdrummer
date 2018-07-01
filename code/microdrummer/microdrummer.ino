@@ -1,9 +1,14 @@
+//Inputs
 const byte sigIn = 2;
 const byte btnIn = 3;
-const byte trigOutLed = 4;
-const byte trigOut = 5;
-const byte gateOutLed = 6;
-const byte gateOut = 7;
+const byte clrIn = 4;
+//Outputs
+const byte sigLed = 5;
+const byte trigOutLed = 6;
+const byte trigOut = 7;
+const byte gateOutLed = 8;
+const byte gateOut = 9;
+//Other constants
 const byte triggerDurationMs = 3;
 const byte triggerLedDurationMs = 20;
 
@@ -32,6 +37,7 @@ void setup(){
   //init inputs
   pinMode(sigIn, INPUT);
   pinMode(btnIn, INPUT);
+  pinMode(clrIn, INPUT);
 
   //init outputs
   pinMode(trigOutLed, OUTPUT);
