@@ -48,17 +48,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Teensy3.2 U1
-U 1 1 5B3923DD
-P 9500 3750
-F 0 "U1" H 9500 5250 60  0000 C CNN
-F 1 "Teensy3.2" H 9500 2250 60  0000 C CNN
-F 2 "teensy:Teensy30_31_32_LC" H 9500 2950 60  0001 C CNN
-F 3 "" H 9500 2950 60  0000 C CNN
-	1    9500 3750
-	1    0    0    -1  
-$EndComp
-$Comp
 L LED D1
 U 1 1 5B39243B
 P 6600 3750
@@ -135,7 +124,6 @@ NoConn ~ 10500 4250
 NoConn ~ 10500 4350
 NoConn ~ 10500 4450
 NoConn ~ 10500 4650
-NoConn ~ 10500 4750
 NoConn ~ 10500 4850
 NoConn ~ 10500 4950
 NoConn ~ 10500 5050
@@ -151,7 +139,6 @@ NoConn ~ 8500 4250
 NoConn ~ 8500 4150
 NoConn ~ 8500 4050
 NoConn ~ 8500 3850
-NoConn ~ 8500 3750
 NoConn ~ 8500 3650
 NoConn ~ 8500 3550
 NoConn ~ 8500 2650
@@ -269,16 +256,6 @@ Wire Wire Line
 Connection ~ 5700 1200
 Wire Wire Line
 	5700 2800 5950 2800
-Wire Wire Line
-	5550 2950 5550 6000
-Wire Wire Line
-	5550 2950 6800 2950
-Wire Wire Line
-	6800 2950 6800 2800
-Wire Wire Line
-	6800 3250 6800 3400
-Wire Wire Line
-	6800 3400 5550 3400
 Connection ~ 5700 3750
 Wire Wire Line
 	7000 2400 8400 2400
@@ -310,14 +287,6 @@ Wire Wire Line
 	8100 3750 8100 3050
 Wire Wire Line
 	8100 3050 8500 3050
-Wire Wire Line
-	6400 3250 6400 3050
-Wire Wire Line
-	6400 3050 8050 3050
-Wire Wire Line
-	8050 3050 8050 2950
-Wire Wire Line
-	8050 2950 8500 2950
 Connection ~ 5700 4150
 Wire Wire Line
 	5700 1200 5700 5400
@@ -381,13 +350,6 @@ Wire Wire Line
 Connection ~ 5700 5150
 Connection ~ 7000 5600
 Wire Wire Line
-	8500 3950 8400 3950
-Wire Wire Line
-	8400 3950 8400 6000
-Wire Wire Line
-	8400 6000 5550 6000
-Connection ~ 5550 3400
-Wire Wire Line
 	1400 1200 1400 1400
 Connection ~ 1400 1300
 Wire Wire Line
@@ -412,4 +374,46 @@ Wire Wire Line
 Wire Wire Line
 	1500 600  1500 1000
 Connection ~ 1500 1000
+NoConn ~ 8500 2950
+$Comp
+L Teensy3.2 U1
+U 1 1 5B3923DD
+P 9500 3750
+F 0 "U1" H 9500 5250 60  0000 C CNN
+F 1 "Teensy3.2" H 9500 2250 60  0000 C CNN
+F 2 "teensy:Teensy30_31_32_LC" H 9500 2950 60  0001 C CNN
+F 3 "" H 9500 2950 60  0000 C CNN
+	1    9500 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 3750 8400 3750
+Wire Wire Line
+	8400 3750 8400 3600
+Wire Wire Line
+	8400 3600 7950 3600
+Wire Wire Line
+	7950 3600 7950 3050
+Wire Wire Line
+	7950 3050 6400 3050
+Wire Wire Line
+	6400 3050 6400 3250
+Wire Wire Line
+	5600 5900 10600 5900
+Wire Wire Line
+	5600 2950 5600 5900
+Wire Wire Line
+	5600 3450 6800 3450
+Wire Wire Line
+	6800 3450 6800 3250
+Wire Wire Line
+	6800 2800 6800 2950
+Wire Wire Line
+	6800 2950 5600 2950
+Connection ~ 5600 3450
+Wire Wire Line
+	10500 4750 10600 4750
+Wire Wire Line
+	10600 4750 10600 5900
+NoConn ~ 8500 3950
 $EndSCHEMATC
