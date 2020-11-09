@@ -36,6 +36,7 @@ unsigned long heldDownAt = 0;
 bool trigHigh = false;
 bool gateHigh = false;
 bool sigHigh = false;
+bool tempGate = false;
 uint16_t sinceRise = 0;
 
 void setup(){
@@ -82,17 +83,17 @@ void loop(){
     gateHigh = true;
     digitalWrite(OUT_GATE, HIGH);
     gateLowTime = max(gateLowTime, curr->lowTime);
-    
-    trigHigh = true;
-    digitalWrite(OUT_TRIGGER, HIGH);
-    trigLowTime = sinceRise + triggerDurationMs;
+
+    startTrigger();
 
     prev = curr;
     curr = curr->next;
   } else {
     if (gateHigh && holdingDown == NULL && sinceRise >= gateLowTime){
       gateHigh = false;
-      digitalWrite(OUT_GATE, LOW);
+      if (!tempGate){
+        digitalWrite(OUT_GATE, LOW);
+      }
     }
     if (trigHigh && sinceRise >= trigLowTime){
       trigHigh = false;
@@ -101,7 +102,16 @@ void loop(){
   }
 }
 
+inline void startTrigger(){
+  if (!trigHigh){
+    trigHigh = true;
+    digitalWrite(OUT_TRIGGER, HIGH);
+    trigLowTime = sinceRise + triggerDurationMs;
+  }
+}
+
 inline void handleInputs(){
+  recB.update();
   if (sigB.update()){
     if (sigB.fell()){
       restartSequence();
@@ -111,7 +121,13 @@ inline void handleInputs(){
   }
   if (inB.update()){
     if (inB.fell()){
-      insertEvent();
+      if (!recB.read()){
+        insertEvent();
+      } else {
+        tempGate = true;
+        digitalWrite(OUT_GATE, HIGH);
+        startTrigger();
+      }
     }
     else {
       finishEvent();
@@ -189,6 +205,11 @@ inline void finishEvent(){
     // in the case where there is another gate that spans this one
     gateLowTime = holdingDown->lowTime;
     holdingDown = NULL;
+  } else if (tempGate){
+    tempGate = false;
+    if (!gateHigh){
+      digitalWrite(OUT_GATE, LOW);
+    }
   }
 }
 
