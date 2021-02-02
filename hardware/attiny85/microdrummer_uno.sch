@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Switch1:SW_SPST bin1
+L Switch:SW_SPST bin1
 U 1 1 5B3956B4
 P 5400 4150
 F 0 "bin1" H 5400 4275 50  0000 C CNN
@@ -25,7 +25,7 @@ F 3 "" H 5400 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch1:SW_SPST bclr1
+L Switch:SW_SPST bclr1
 U 1 1 5B395716
 P 5400 3250
 F 0 "bclr1" H 5400 3375 50  0000 C CNN
@@ -40,25 +40,14 @@ BTN_IN
 Text Label 5200 3250 2    60   ~ 0
 BTN_CLR
 $Comp
-L microdrummer-rescue:AVR-ISP-6 ISP1
-U 1 1 5C24387F
-P 6450 5300
-F 0 "ISP1" H 6345 5540 50  0000 C CNN
-F 1 "AVR-ISP-6" H 6185 5070 50  0000 L BNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x03_Pitch2.54mm" V 5930 5340 50  0001 C CNN
-F 3 "" H 6425 5300 50  0001 C CNN
-	1    6450 5300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Miasma_IO_smd-cache:Thonk Jin1
+L Connector:AudioJack2_SwitchT Jin1
 U 1 1 5C52850D
-P 1250 3200
-F 0 "Jin1" H 1250 3200 60  0000 C CNN
-F 1 "Thonk" H 1250 3350 60  0000 C CNN
-F 2 "chillpizza:schurter_3.5mm_mono_audio" H 1250 3200 60  0001 C CNN
-F 3 "" H 1250 3200 60  0000 C CNN
-	1    1250 3200
+P 1350 3300
+F 0 "Jin1" H 1350 3300 60  0000 C CNN
+F 1 "Thonk" H 1350 3450 60  0000 C CNN
+F 2 "chillpizza:schurter_3.5mm_mono_audio" H 1350 3300 60  0001 C CNN
+F 3 "" H 1350 3300 60  0000 C CNN
+	1    1350 3300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -84,7 +73,7 @@ F 3 "" H 2050 3050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Miasma_IO_smd-cache:MMBT3904 Qin1
+L Transistor_BJT:MMBT3904 Qin1
 U 1 1 5C528741
 P 2350 3300
 F 0 "Qin1" H 2550 3375 50  0000 L CNN
@@ -156,8 +145,6 @@ $EndComp
 Text Label 1500 6000 2    60   ~ 0
 RAW_OUTPUT
 Wire Wire Line
-	1550 3000 1550 3100
-Wire Wire Line
 	2050 2800 2050 2900
 Wire Wire Line
 	1650 3300 1550 3300
@@ -201,7 +188,7 @@ $EndComp
 Wire Wire Line
 	5700 3250 5600 3250
 $Comp
-L SparkFun-Connectors:LITTLEBITS_FEMALE M2
+L microdrummer_uno-rescue:LITTLEBITS_FEMALE-SparkFun-Connectors M2
 U 1 1 5C670B33
 P 10750 850
 F 0 "M2" H 10750 850 50  0001 C CNN
@@ -212,7 +199,7 @@ F 3 "" H 10750 850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SparkFun-Connectors:LITTLEBITS_MALE M1
+L microdrummer_uno-rescue:LITTLEBITS_MALE-SparkFun-Connectors M1
 U 1 1 5C670BF7
 P 8950 850
 F 0 "M1" H 8950 850 50  0001 C CNN
@@ -271,7 +258,7 @@ F 3 "" H 10450 950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch1:SW_SPDT SELout1
+L Switch:SW_SPDT SELout1
 U 1 1 5C6726D5
 P 2150 4700
 F 0 "SELout1" H 2150 4870 50  0000 C CNN
@@ -287,7 +274,6 @@ Text Label 1950 4800 2    60   ~ 0
 OUT_GATE
 Text Label 1950 4600 2    60   ~ 0
 OUT_TRIGGER
-Connection ~ 1550 3100
 $Comp
 L power:GND #PWR019
 U 1 1 5C68587D
@@ -314,18 +300,16 @@ F 3 "" H 3250 6300 50  0001 C CNN
 	1    3250 6300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3250 6200 3250 6300
-NoConn ~ 3250 6100
+NoConn ~ 3250 5900
 $Comp
-L Miasma_IO_smd-cache:Thonk Jout1
+L Connector:AudioJack2_SwitchT Jout1
 U 1 1 5C53024A
-P 3550 6100
-F 0 "Jout1" H 3550 6100 60  0000 C CNN
-F 1 "Thonk" H 3550 6250 60  0000 C CNN
-F 2 "chillpizza:schurter_3.5mm_mono_audio" H 3550 6100 60  0001 C CNN
-F 3 "" H 3550 6100 60  0000 C CNN
-	1    3550 6100
+P 3450 6000
+F 0 "Jout1" H 3450 6000 60  0000 C CNN
+F 1 "Thonk" H 3450 6150 60  0000 C CNN
+F 2 "chillpizza:schurter_3.5mm_mono_audio" H 3450 6000 60  0001 C CNN
+F 3 "" H 3450 6000 60  0000 C CNN
+	1    3450 6000
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -351,7 +335,7 @@ F 3 "" H 1950 6700 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Miasma_IO_smd-cache:MMBT3904 Qout1
+L Transistor_BJT:MMBT3904 Qout1
 U 1 1 5C71A36D
 P 1850 7050
 F 0 "Qout1" H 2050 7125 50  0000 L CNN
@@ -477,8 +461,6 @@ Wire Wire Line
 	3100 6000 3250 6000
 Wire Wire Line
 	2050 3300 2150 3300
-Wire Wire Line
-	1550 3100 1550 3200
 Wire Wire Line
 	1650 6000 2050 6000
 Wire Wire Line
@@ -777,7 +759,7 @@ NoConn ~ 9800 3850
 Wire Wire Line
 	2400 6000 2750 6000
 $Comp
-L Switch1:SW_SPST brec1
+L Switch:SW_SPST brec1
 U 1 1 5F1FF126
 P 5400 3700
 F 0 "brec1" H 5400 3825 50  0000 C CNN
@@ -802,54 +784,28 @@ F 3 "" H 5700 3700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5700 3700 5600 3700
-Wire Wire Line
-	6550 5200 6900 5200
-Wire Wire Line
-	6900 5200 6900 5050
-Wire Wire Line
-	6550 5300 6900 5300
-Wire Wire Line
-	6550 5400 6900 5400
-Wire Wire Line
-	6900 5400 6900 5550
-Wire Wire Line
-	6300 5200 6000 5200
-Wire Wire Line
-	6000 5200 6000 5050
-Wire Wire Line
-	6300 5300 6000 5300
-Wire Wire Line
-	6300 5400 6000 5400
-Wire Wire Line
-	6000 5400 6000 5550
-Text Label 6900 5300 0    50   ~ 0
-ISP_MOSI
-Text Label 6000 5050 2    50   ~ 0
-ISP_MISO
-Text Label 6000 5300 2    50   ~ 0
+Text Label 7200 5300 0    50   ~ 0
 ISP_SCK
-Text Label 6000 5550 2    50   ~ 0
-ISP_RST
 $Comp
 L power:GND #PWR0113
 U 1 1 5F225406
-P 6900 5550
-F 0 "#PWR0113" H 6900 5300 50  0001 C CNN
-F 1 "GND" H 6905 5377 50  0000 C CNN
-F 2 "" H 6900 5550 50  0001 C CNN
-F 3 "" H 6900 5550 50  0001 C CNN
-	1    6900 5550
+P 6350 5850
+F 0 "#PWR0113" H 6350 5600 50  0001 C CNN
+F 1 "GND" H 6355 5677 50  0000 C CNN
+F 2 "" H 6350 5850 50  0001 C CNN
+F 3 "" H 6350 5850 50  0001 C CNN
+	1    6350 5850
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+5V #PWR0114
 U 1 1 5F225A1B
-P 6900 5050
-F 0 "#PWR0114" H 6900 4900 50  0001 C CNN
-F 1 "+5V" H 6915 5223 50  0000 C CNN
-F 2 "" H 6900 5050 50  0001 C CNN
-F 3 "" H 6900 5050 50  0001 C CNN
-	1    6900 5050
+P 6350 4650
+F 0 "#PWR0114" H 6350 4500 50  0001 C CNN
+F 1 "+5V" H 6365 4823 50  0000 C CNN
+F 2 "" H 6350 4650 50  0001 C CNN
+F 3 "" H 6350 4650 50  0001 C CNN
+	1    6350 4650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -936,7 +892,7 @@ F 3 "" H 1000 1250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Miasma_IO_smd-cache:+12V #PWR0106
+L power:+12V #PWR0106
 U 1 1 5F24B4FF
 P 2100 1050
 F 0 "#PWR0106" H 2100 900 50  0001 C CNN
@@ -947,7 +903,7 @@ F 3 "" H 2100 1050 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Miasma_IO_smd-cache:+12V #PWR0117
+L power:+12V #PWR0117
 U 1 1 5F24BB02
 P 1000 1050
 F 0 "#PWR0117" H 1000 900 50  0001 C CNN
@@ -979,4 +935,54 @@ Wire Wire Line
 	2000 1050 2100 1050
 NoConn ~ 9800 4850
 NoConn ~ 9800 4750
+Wire Wire Line
+	1550 3000 1550 3200
+$Comp
+L power:GND #PWR?
+U 1 1 601A523B
+P 1400 3750
+F 0 "#PWR?" H 1400 3500 50  0001 C CNN
+F 1 "GND" H 1405 3577 50  0000 C CNN
+F 2 "" H 1400 3750 50  0001 C CNN
+F 3 "" H 1400 3750 50  0001 C CNN
+	1    1400 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 3750 1400 3600
+Wire Wire Line
+	1400 3600 1550 3600
+Wire Wire Line
+	1550 3600 1550 3400
+Wire Wire Line
+	3250 6100 3250 6300
+Wire Wire Line
+	6850 5200 7200 5200
+Text Label 7200 5200 0    50   ~ 0
+ISP_MOSI
+$Comp
+L Connector:AVR-ISP-6 ISP1
+U 1 1 5C24387F
+P 6450 5300
+F 0 "ISP1" H 6345 5540 50  0000 C CNN
+F 1 "AVR-ISP-6" H 6185 5070 50  0000 L BNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x03_Pitch2.54mm" V 5930 5340 50  0001 C CNN
+F 3 "" H 6425 5300 50  0001 C CNN
+	1    6450 5300
+	1    0    0    -1  
+$EndComp
+Text Label 7200 5100 0    50   ~ 0
+ISP_MISO
+Wire Wire Line
+	7200 5100 6850 5100
+Wire Wire Line
+	7200 5300 6850 5300
+Text Label 7200 5400 0    50   ~ 0
+ISP_RST
+Wire Wire Line
+	7200 5400 6850 5400
+Wire Wire Line
+	6350 4650 6350 4800
+Wire Wire Line
+	6350 5700 6350 5850
 $EndSCHEMATC
