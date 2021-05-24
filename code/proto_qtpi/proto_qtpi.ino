@@ -37,7 +37,7 @@ Bounce sigB = Bounce();
 Bounce recB = Bounce();
 Bounce inB = Bounce();
 //Other constants
-const byte triggerDurationMs = 3;
+const byte triggerDurationMs = 10;
 const byte debounceDurationMs = 10;
 
 struct Node {
