@@ -25,7 +25,6 @@
 #define QUEUE_LENGTH 8
 #define BTN_REC 1
 #define BTN_IN 0
-#define OUT_GATE 8
 #define OUT_TRIGGER 9
 
 Adafruit_NeoPixel pixels(1, PIN_NEOPIXEL);
@@ -45,6 +44,7 @@ struct Node {
   Node* next;
   uint16_t highTime;
   uint16_t lowTime;
+  uint8_t index;
 };
 
 //We will keep a singly-linked list of events
@@ -53,17 +53,11 @@ Node* head = NULL;
 Node* curr = NULL;
 Node* prev = NULL;
 uint16_t numNodes = 0;
-uint16_t numUndo = 0;
-uint16_t currNode = -1;
-uint16_t gateLowTime = 0;
+uint16_t numActive = 0;
 uint16_t trigLowTime = 0;
 unsigned long prevSignalRise = 0;
-Node* holdingDown = NULL;
-unsigned long heldDownAt = 0;
 bool trigHigh = false;
-bool gateHigh = false;
 bool sigHigh = false;
-bool tempGate = false;
 uint16_t sinceRise = 0;
 
 void setup(){
@@ -75,7 +69,6 @@ void setup(){
 
   //init outputs
   pinMode(OUT_TRIGGER, OUTPUT);
-  pinMode(OUT_GATE, OUTPUT);
   //pinMode(IN_LED, OUTPUT);
   pixels.begin();
   bar.begin(0x70);  // pass in the address
@@ -84,7 +77,6 @@ void setup(){
 
   //set outputs low
   digitalWrite(OUT_TRIGGER, LOW);
-  digitalWrite(OUT_GATE, LOW);
   //digitalWrite(IN_LED, LOW);
 
   //init debouncing
@@ -127,21 +119,14 @@ void loop(){
 
   //if the next event is scheduled to happen now
   if (curr != NULL && curr->highTime <= sinceRise){
-    gateHigh = true;
-    digitalWrite(OUT_GATE, HIGH);
-    gateLowTime = max(gateLowTime, curr->lowTime);
-
-    startTrigger();
+    if (curr->index < numActive){
+  
+      startTrigger();
+    }
 
     prev = curr;
     curr = curr->next;
   } else {
-    if (gateHigh && holdingDown == NULL && sinceRise >= gateLowTime){
-      gateHigh = false;
-      if (!tempGate){
-        digitalWrite(OUT_GATE, LOW);
-      }
-    }
     if (trigHigh && sinceRise >= trigLowTime){
       trigHigh = false;
       digitalWrite(OUT_TRIGGER, LOW);
@@ -163,16 +148,15 @@ inline void handleInputs(){
   byte i = rotary.rotate();
   if (i != 0){
     bool changed = false;
-    if (i == 1 && numUndo > 0){
-      numUndo--;
+    if (i == 1 && numActive < numNodes){
+      numActive++;
       changed = true;
     }
-    if (i == 2 && numUndo < numNodes){
-      numUndo++;
+    if (i == 2 && numActive > 0){
+      numActive--;
       changed = true;
     }
     if (changed){
-      byte numActive = numNodes - numUndo;
       if (i == 1 && numActive <= QUEUE_LENGTH){
         bar.setBar(QUEUE_OFFSET + numActive - 1, LED_GREEN);
         bar.writeDisplay();
@@ -203,10 +187,9 @@ inline void handleInputs(){
   if (inB.update()){
     if (inB.fell()){
       if (!recB.read()){
+        clearUndos();
         insertEvent();
       } else {
-        tempGate = true;
-        digitalWrite(OUT_GATE, HIGH);
         startTrigger();
       }
     }
@@ -218,14 +201,8 @@ inline void handleInputs(){
 
 //Start the sequence over
 inline void restartSequence(){
-  //wrap trigger and gate timers to new sequence
+  //wrap trigger timer to new sequence
   uint16_t prevSequenceDuration = (millis() - prevSignalRise);
-
-  if (gateLowTime <= prevSequenceDuration){
-    gateLowTime = 0;
-  } else {
-    gateLowTime = gateLowTime - prevSequenceDuration;
-  }
   
   if (trigLowTime <= prevSequenceDuration){
     trigLowTime = 0;
@@ -240,13 +217,43 @@ inline void restartSequence(){
   prev = NULL;
 }
 
+inline void clearUndos(){
+  Node* _prev = NULL;
+  Node* _removed = NULL;
+  Node* _curr = head;
+  while (_curr != NULL && numActive < numNodes){
+    if (_curr->index >= numActive){
+      _removed = _curr;
+      if (_prev == NULL){
+        head = _curr->next;
+      } else {
+        _prev->next = _curr->next;
+      }
+      _curr = _curr->next;
+      if (_removed == prev){
+        prev = _prev;
+      }
+      if (_removed == curr){
+        curr = _curr;
+      }
+      if (_removed->index < QUEUE_LENGTH){
+        bar.setBar(_removed->index + QUEUE_OFFSET, LED_OFF);
+      }
+      delete _removed;
+      numNodes--;
+    } else {
+      _prev = _curr;
+      _curr = _curr->next;
+    }
+  }
+}
+
 //add an event to the sequence
 inline void insertEvent(){
   //create the new event node
   Node* newest = new Node;
   newest->highTime = sinceRise;
-  holdingDown = newest;
-  heldDownAt = millis();
+  newest->index = numNodes;
 
   //normally the next event has not triggered yet.
   // curr may be null if we have already reached the end of the sequence
@@ -280,22 +287,10 @@ inline void insertEvent(){
     bar.writeDisplay();
   }
   numNodes++;
+  numActive++;
 }
 
-//Release the current gate
 inline void finishEvent(){
-  if (holdingDown != NULL){
-    holdingDown->lowTime = ((millis() - heldDownAt) + holdingDown->highTime);
-    //when you insert this event, it will set the gate low too early
-    // in the case where there is another gate that spans this one
-    gateLowTime = holdingDown->lowTime;
-    holdingDown = NULL;
-  } else if (tempGate){
-    tempGate = false;
-    if (!gateHigh){
-      digitalWrite(OUT_GATE, LOW);
-    }
-  }
 }
 
 inline void clearEvents(){
@@ -310,8 +305,10 @@ inline void clearEvents(){
   head = NULL;
   prev = NULL;
   curr = NULL;
-  holdingDown = NULL;
   numNodes = 0;
-  bar.clear();
+  numActive = 0;
+  for(uint8_t i = QUEUE_LENGTH + QUEUE_OFFSET - 1; i >= QUEUE_OFFSET; i--){
+    bar.setBar(i, LED_OFF);
+  }
   bar.writeDisplay();
 }
