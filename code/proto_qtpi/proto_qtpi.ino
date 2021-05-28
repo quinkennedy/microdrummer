@@ -3,6 +3,7 @@
 #define USE_GRID
 //#define RANDOMIZE_GRID
 #define SNAKE_GRID
+#define USE_SERIAL
 
 #include <Adafruit_GFX.h>
 #ifdef USE_BAR
@@ -106,6 +107,9 @@ uint8_t r[] = {
 #endif
 
 void setup(){
+  #ifdef USE_SERIAL
+  Serial.begin(9600);
+  #endif
   //init inputs
   pinMode(IN_SIGNAL, INPUT_PULLUP);
   pinMode(BTN_IN, INPUT_PULLUP);
@@ -202,6 +206,11 @@ void loop(){
     if (curr->index < numActive){
   
       startTrigger();
+      #ifdef USE_SERIAL
+      Serial.print("t");
+      Serial.print(curr->index);
+      Serial.print(".");
+      #endif
       #ifdef USE_GRID
       grid.setPixelColor(r[curr->index], triggeredColor);
       grid.show();
@@ -263,6 +272,9 @@ inline void handleInputs(){
       changed = true;
     }
     if (changed){
+      #ifdef USE_SERIAL
+      nodesComm();
+      #endif
       if (rot == 1 && numActive <= QUEUE_LENGTH){
         #ifdef USE_BAR
         bar.setBar(QUEUE_OFFSET + numActive - 1, LED_GREEN);
@@ -434,6 +446,17 @@ inline void insertEvent(){
   }
   numNodes++;
   numActive++;
+  nodesComm();
+}
+
+inline void nodesComm(){
+  #ifdef USE_SERIAL
+  Serial.print("n");
+  Serial.print(numNodes);
+  Serial.print(".a");
+  Serial.print(numActive);
+  Serial.print(".");
+  #endif
 }
 
 inline void finishEvent(){
@@ -453,6 +476,7 @@ inline void clearEvents(){
   curr = NULL;
   numNodes = 0;
   numActive = 0;
+  nodesComm();
   #ifdef USE_BAR
   for(uint8_t i = QUEUE_LENGTH + QUEUE_OFFSET - 1; i >= QUEUE_OFFSET; i--){
     bar.setBar(i, LED_OFF);
