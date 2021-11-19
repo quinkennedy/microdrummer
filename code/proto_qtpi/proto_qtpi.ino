@@ -2,7 +2,9 @@
 //#define USE_BAR
 #define USE_GRID
 //#define RANDOMIZE_GRID
-#define SNAKE_GRID
+//#define SNAKE_GRID
+//#define LTR_GRID
+#define NOBRAIN_GRID
 #define USE_SERIAL
 
 #include <Adafruit_GFX.h>
@@ -45,10 +47,10 @@
 #define LED_BRIGHTNESS 4
 
 Adafruit_NeoPixel pixio(1, PIN_NEOPIXEL);
-Adafruit_NeoPixel grid(32, NEO_PIN);
-uint32_t activeColor = Adafruit_NeoPixel::Color(LED_BRIGHTNESS, LED_BRIGHTNESS, 0);
-uint32_t inactiveColor = Adafruit_NeoPixel::Color(LED_BRIGHTNESS/4, LED_BRIGHTNESS/4, 0);
-uint32_t triggeredColor = Adafruit_NeoPixel::Color(LED_BRIGHTNESS*8, LED_BRIGHTNESS*8, 0);
+Adafruit_NeoPixel grid(34, NEO_PIN);
+uint32_t activeColor = Adafruit_NeoPixel::Color(0, 0, 6);
+uint32_t inactiveColor = Adafruit_NeoPixel::Color(0,0,1);
+uint32_t triggeredColor = Adafruit_NeoPixel::Color(25,25,25);
 uint32_t offColor = 0;
 #ifdef USE_BAR
 Adafruit_24bargraph bar = Adafruit_24bargraph();
@@ -61,7 +63,7 @@ Bounce sigB = Bounce();
 Bounce recB = Bounce();
 Bounce inB = Bounce();
 //Other constants
-const byte triggerDurationMs = 10;
+const byte triggerDurationMs = 30;
 const byte debounceDurationMs = 10;
 
 struct Node {
@@ -96,6 +98,20 @@ uint8_t r[] = {
   5, 13, 21, 29, 28, 20, 12, 4,
   3, 11, 19, 27, 26, 18, 10, 2,
   1, 9,  17, 25, 24, 16, 8,  0 
+};
+#elif defined LTR_GRID
+uint8_t r[] = {
+  31,23,15,7,30,22,14,6,
+  29,21,13,5,28,20,12,4,
+  27,19,11,3,26,18,10,2,
+  25,17,9,1,24,16,8,0
+};
+#elif defined NOBRAIN_GRID
+uint8_t r[] = {
+  0,  1,  2,  3,  7,  6,  5,  4,
+  8,  9,  10, 11, 15, 14, 13, 12,
+  16, 17, 18, 19, 23, 22, 21, 20,
+  24, 25, 26, 27, 31, 30, 29, 28
 };
 #else
 uint8_t r[] = {
@@ -198,6 +214,8 @@ void loop(){
     #else
     pixio.setPixelColor(0, pixio.Color(0, 0, 0));
     pixio.show();
+    grid.setPixelColor(33, pixio.Color(0,0,0));
+    grid.show();
     #endif
   }
 
@@ -229,6 +247,8 @@ void loop(){
       #else
       pixio.setPixelColor(0, pixio.Color(0, 0, 0));
       pixio.show();
+      grid.setPixelColor(32, pixio.Color(0,0,0));
+      grid.show();
       #endif
       #ifdef USE_GRID
       //TODO: there is probably a bug here around multiple triggers too close
@@ -251,6 +271,8 @@ inline void startTrigger(){
     #else
     pixio.setPixelColor(0, pixio.Color(0, 0, 20));
     pixio.show();
+    grid.setPixelColor(32, pixio.Color(255,255,255));
+    grid.show();
     #endif
   }
 }
@@ -328,6 +350,8 @@ inline void handleInputs(){
       #else
       pixio.setPixelColor(0, pixio.Color(0, 20, 0));
       pixio.show();
+      grid.setPixelColor(33, pixio.Color(255,255,255));
+      grid.show();
       #endif
     }
   }

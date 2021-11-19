@@ -1,0 +1,916 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Switch:SW_SPST SW2
+U 1 1 6118779A
+P 9650 4300
+F 0 "SW2" H 9650 4535 50  0000 C CNN
+F 1 "SW_SPST" H 9650 4444 50  0000 C CNN
+F 2 "Keebio-Parts:Kailh-PG1350-1u-NoLED" H 9650 4300 50  0001 C CNN
+F 3 "~" H 9650 4300 50  0001 C CNN
+	1    9650 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPST SW3
+U 1 1 61187CE9
+P 9650 4750
+F 0 "SW3" H 9650 4985 50  0000 C CNN
+F 1 "SW_SPST" H 9650 4894 50  0000 C CNN
+F 2 "Keebio-Parts:Kailh-PG1350-1u-NoLED" H 9650 4750 50  0001 C CNN
+F 3 "~" H 9650 4750 50  0001 C CNN
+	1    9650 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI D27
+U 1 1 6118D603
+P 5800 3100
+F 0 "D27" H 6144 3146 50  0000 L CNN
+F 1 "SK6812MINI" H 6144 3055 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 5850 2800 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 5900 2725 50  0001 L TNN
+	1    5800 3100
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED:SK6812MINI D19
+U 1 1 6118F314
+P 4450 3100
+F 0 "D19" H 4794 3146 50  0000 L CNN
+F 1 "SK6812MINI" H 4794 3055 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 4500 2800 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 4550 2725 50  0001 L TNN
+	1    4450 3100
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED:SK6812MINI D11
+U 1 1 611904E2
+P 3100 3100
+F 0 "D11" H 3444 3146 50  0000 L CNN
+F 1 "SK6812MINI" H 3444 3055 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 3150 2800 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 3200 2725 50  0001 L TNN
+	1    3100 3100
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED:SK6812MINI D3
+U 1 1 611904E8
+P 1750 3100
+F 0 "D3" H 2094 3146 50  0000 L CNN
+F 1 "SK6812MINI" H 2094 3055 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 1800 2800 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 1850 2725 50  0001 L TNN
+	1    1750 3100
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED:SK6812MINI D4
+U 1 1 61193870
+P 1750 3900
+F 0 "D4" H 2094 3946 50  0000 L CNN
+F 1 "SK6812MINI" H 2094 3855 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 1800 3600 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 1850 3525 50  0001 L TNN
+	1    1750 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI D12
+U 1 1 61193876
+P 3100 3900
+F 0 "D12" H 3444 3946 50  0000 L CNN
+F 1 "SK6812MINI" H 3444 3855 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 3150 3600 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 3200 3525 50  0001 L TNN
+	1    3100 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI D20
+U 1 1 6119387C
+P 4450 3900
+F 0 "D20" H 4794 3946 50  0000 L CNN
+F 1 "SK6812MINI" H 4794 3855 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 4500 3600 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 4550 3525 50  0001 L TNN
+	1    4450 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI D28
+U 1 1 61193882
+P 5800 3900
+F 0 "D28" H 6144 3946 50  0000 L CNN
+F 1 "SK6812MINI" H 6144 3855 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 5850 3600 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 5900 3525 50  0001 L TNN
+	1    5800 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI D25
+U 1 1 6119F864
+P 5800 1300
+F 0 "D25" H 6144 1346 50  0000 L CNN
+F 1 "SK6812MINI" H 6144 1255 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 5850 1000 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 5900 925 50  0001 L TNN
+	1    5800 1300
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED:SK6812MINI D17
+U 1 1 6119F86A
+P 4450 1300
+F 0 "D17" H 4794 1346 50  0000 L CNN
+F 1 "SK6812MINI" H 4794 1255 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 4500 1000 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 4550 925 50  0001 L TNN
+	1    4450 1300
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED:SK6812MINI D9
+U 1 1 6119F870
+P 3100 1300
+F 0 "D9" H 3444 1346 50  0000 L CNN
+F 1 "SK6812MINI" H 3444 1255 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 3150 1000 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 3200 925 50  0001 L TNN
+	1    3100 1300
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED:SK6812MINI D1
+U 1 1 6119F876
+P 1750 1300
+F 0 "D1" H 2094 1346 50  0000 L CNN
+F 1 "SK6812MINI" H 2094 1255 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 1800 1000 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 1850 925 50  0001 L TNN
+	1    1750 1300
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED:SK6812MINI D2
+U 1 1 6119F87C
+P 1750 2250
+F 0 "D2" H 2094 2296 50  0000 L CNN
+F 1 "SK6812MINI" H 2094 2205 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 1800 1950 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 1850 1875 50  0001 L TNN
+	1    1750 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI D10
+U 1 1 6119F882
+P 3100 2250
+F 0 "D10" H 3444 2296 50  0000 L CNN
+F 1 "SK6812MINI" H 3444 2205 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 3150 1950 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 3200 1875 50  0001 L TNN
+	1    3100 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI D18
+U 1 1 6119F888
+P 4450 2250
+F 0 "D18" H 4794 2296 50  0000 L CNN
+F 1 "SK6812MINI" H 4794 2205 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 4500 1950 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 4550 1875 50  0001 L TNN
+	1    4450 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI D26
+U 1 1 6119F88E
+P 5800 2250
+F 0 "D26" H 6144 2296 50  0000 L CNN
+F 1 "SK6812MINI" H 6144 2205 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 5850 1950 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 5900 1875 50  0001 L TNN
+	1    5800 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI D31
+U 1 1 611AB454
+P 5800 6350
+F 0 "D31" H 6144 6396 50  0000 L CNN
+F 1 "SK6812MINI" H 6144 6305 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 5850 6050 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 5900 5975 50  0001 L TNN
+	1    5800 6350
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED:SK6812MINI D23
+U 1 1 611AB45A
+P 4450 6350
+F 0 "D23" H 4794 6396 50  0000 L CNN
+F 1 "SK6812MINI" H 4794 6305 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 4500 6050 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 4550 5975 50  0001 L TNN
+	1    4450 6350
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED:SK6812MINI D15
+U 1 1 611AB460
+P 3100 6350
+F 0 "D15" H 3444 6396 50  0000 L CNN
+F 1 "SK6812MINI" H 3444 6305 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 3150 6050 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 3200 5975 50  0001 L TNN
+	1    3100 6350
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED:SK6812MINI D7
+U 1 1 611AB466
+P 1750 6350
+F 0 "D7" H 2094 6396 50  0000 L CNN
+F 1 "SK6812MINI" H 2094 6305 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 1800 6050 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 1850 5975 50  0001 L TNN
+	1    1750 6350
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED:SK6812MINI D8
+U 1 1 611AB46C
+P 1750 7200
+F 0 "D8" H 2094 7246 50  0000 L CNN
+F 1 "SK6812MINI" H 2094 7155 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 1800 6900 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 1850 6825 50  0001 L TNN
+	1    1750 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI D16
+U 1 1 611AB472
+P 3100 7200
+F 0 "D16" H 3444 7246 50  0000 L CNN
+F 1 "SK6812MINI" H 3444 7155 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 3150 6900 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 3200 6825 50  0001 L TNN
+	1    3100 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI D24
+U 1 1 611AB478
+P 4450 7200
+F 0 "D24" H 4794 7246 50  0000 L CNN
+F 1 "SK6812MINI" H 4794 7155 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 4500 6900 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 4550 6825 50  0001 L TNN
+	1    4450 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI D32
+U 1 1 611AB47E
+P 5800 7200
+F 0 "D32" H 6144 7246 50  0000 L CNN
+F 1 "SK6812MINI" H 6144 7155 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 5850 6900 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 5900 6825 50  0001 L TNN
+	1    5800 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI D29
+U 1 1 611AB484
+P 5800 4750
+F 0 "D29" H 6144 4796 50  0000 L CNN
+F 1 "SK6812MINI" H 6144 4705 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 5850 4450 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 5900 4375 50  0001 L TNN
+	1    5800 4750
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED:SK6812MINI D21
+U 1 1 611AB48A
+P 4450 4750
+F 0 "D21" H 4794 4796 50  0000 L CNN
+F 1 "SK6812MINI" H 4794 4705 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 4500 4450 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 4550 4375 50  0001 L TNN
+	1    4450 4750
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED:SK6812MINI D13
+U 1 1 611AB490
+P 3100 4750
+F 0 "D13" H 3444 4796 50  0000 L CNN
+F 1 "SK6812MINI" H 3444 4705 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 3150 4450 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 3200 4375 50  0001 L TNN
+	1    3100 4750
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED:SK6812MINI D5
+U 1 1 611AB496
+P 1750 4750
+F 0 "D5" H 2094 4796 50  0000 L CNN
+F 1 "SK6812MINI" H 2094 4705 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 1800 4450 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 1850 4375 50  0001 L TNN
+	1    1750 4750
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED:SK6812MINI D6
+U 1 1 611AB49C
+P 1750 5550
+F 0 "D6" H 2094 5596 50  0000 L CNN
+F 1 "SK6812MINI" H 2094 5505 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 1800 5250 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 1850 5175 50  0001 L TNN
+	1    1750 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI D14
+U 1 1 611AB4A2
+P 3100 5550
+F 0 "D14" H 3444 5596 50  0000 L CNN
+F 1 "SK6812MINI" H 3444 5505 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 3150 5250 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 3200 5175 50  0001 L TNN
+	1    3100 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI D22
+U 1 1 611AB4A8
+P 4450 5550
+F 0 "D22" H 4794 5596 50  0000 L CNN
+F 1 "SK6812MINI" H 4794 5505 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 4500 5250 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 4550 5175 50  0001 L TNN
+	1    4450 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI D30
+U 1 1 611AB4AE
+P 5800 5550
+F 0 "D30" H 6144 5596 50  0000 L CNN
+F 1 "SK6812MINI" H 6144 5505 50  0000 L CNN
+F 2 "chillpizza:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm_flush" H 5850 5250 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 5900 5175 50  0001 L TNN
+	1    5800 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812 D33
+U 1 1 611C463D
+P 8600 2750
+F 0 "D33" H 8944 2796 50  0000 L CNN
+F 1 "SK6812" H 8944 2705 50  0000 L CNN
+F 2 "Keebio-Parts:SK6812-MINI-E" H 8650 2450 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/1138/SK6812+LED+datasheet+.pdf" H 8700 2375 50  0001 L TNN
+	1    8600 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812 D34
+U 1 1 611C61AA
+P 8600 3600
+F 0 "D34" H 8944 3646 50  0000 L CNN
+F 1 "SK6812" H 8944 3555 50  0000 L CNN
+F 2 "Keebio-Parts:SK6812-MINI-E" H 8650 3300 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/1138/SK6812+LED+datasheet+.pdf" H 8700 3225 50  0001 L TNN
+	1    8600 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 7300 1200 7300
+Wire Wire Line
+	1200 7300 1200 7500
+Wire Wire Line
+	1200 7500 1750 7500
+Wire Wire Line
+	1050 7100 1200 7100
+Wire Wire Line
+	1200 7100 1200 6900
+Wire Wire Line
+	1200 6900 1750 6900
+Wire Wire Line
+	1750 7500 3100 7500
+Connection ~ 1750 7500
+Wire Wire Line
+	3100 7500 4450 7500
+Connection ~ 3100 7500
+Wire Wire Line
+	5800 7500 4450 7500
+Connection ~ 4450 7500
+Wire Wire Line
+	5800 6900 5800 6650
+Wire Wire Line
+	5800 6650 4450 6650
+Connection ~ 5800 6650
+Wire Wire Line
+	4450 6650 3100 6650
+Connection ~ 4450 6650
+Wire Wire Line
+	3100 6650 1750 6650
+Connection ~ 3100 6650
+Wire Wire Line
+	5800 7500 6200 7500
+Wire Wire Line
+	6200 7500 6200 6050
+Wire Wire Line
+	6200 6050 5800 6050
+Connection ~ 5800 7500
+Wire Wire Line
+	5800 6050 4450 6050
+Connection ~ 5800 6050
+Wire Wire Line
+	4450 6050 3100 6050
+Connection ~ 4450 6050
+Wire Wire Line
+	3100 6050 1750 6050
+Connection ~ 3100 6050
+Wire Wire Line
+	1750 6050 1750 5850
+Connection ~ 1750 6050
+Wire Wire Line
+	1750 5850 3100 5850
+Connection ~ 1750 5850
+Wire Wire Line
+	3100 5850 4450 5850
+Connection ~ 3100 5850
+Wire Wire Line
+	4450 5850 5800 5850
+Connection ~ 4450 5850
+Wire Wire Line
+	1750 6650 1350 6650
+Wire Wire Line
+	1350 6650 1350 5250
+Wire Wire Line
+	1350 5250 1750 5250
+Connection ~ 1750 6650
+Wire Wire Line
+	1750 5250 3100 5250
+Connection ~ 1750 5250
+Wire Wire Line
+	3100 5250 4450 5250
+Connection ~ 3100 5250
+Wire Wire Line
+	4450 5250 5800 5250
+Connection ~ 4450 5250
+Wire Wire Line
+	5800 5250 5800 5050
+Connection ~ 5800 5250
+Wire Wire Line
+	5800 5050 4450 5050
+Connection ~ 5800 5050
+Wire Wire Line
+	4450 5050 3100 5050
+Connection ~ 4450 5050
+Wire Wire Line
+	3100 5050 1750 5050
+Connection ~ 3100 5050
+Wire Wire Line
+	1750 5050 1350 5050
+Wire Wire Line
+	1350 5050 1350 3600
+Wire Wire Line
+	1350 3600 1750 3600
+Connection ~ 1750 5050
+Wire Wire Line
+	1750 3600 3100 3600
+Connection ~ 1750 3600
+Wire Wire Line
+	3100 3600 4450 3600
+Connection ~ 3100 3600
+Wire Wire Line
+	4450 3600 5800 3600
+Connection ~ 4450 3600
+Wire Wire Line
+	5800 5850 6200 5850
+Wire Wire Line
+	6200 5850 6200 4450
+Wire Wire Line
+	6200 4450 5800 4450
+Connection ~ 5800 5850
+Wire Wire Line
+	5800 4450 4450 4450
+Connection ~ 5800 4450
+Wire Wire Line
+	4450 4450 3100 4450
+Connection ~ 4450 4450
+Wire Wire Line
+	3100 4450 1750 4450
+Connection ~ 3100 4450
+Wire Wire Line
+	1750 4450 1750 4200
+Connection ~ 1750 4450
+Wire Wire Line
+	1750 4200 3100 4200
+Connection ~ 1750 4200
+Wire Wire Line
+	3100 4200 4450 4200
+Connection ~ 3100 4200
+Wire Wire Line
+	4450 4200 5800 4200
+Connection ~ 4450 4200
+Wire Wire Line
+	5800 4200 6200 4200
+Wire Wire Line
+	6200 4200 6200 2800
+Wire Wire Line
+	6200 2800 5800 2800
+Connection ~ 5800 4200
+Wire Wire Line
+	5800 2800 4450 2800
+Connection ~ 5800 2800
+Wire Wire Line
+	4450 2800 3100 2800
+Connection ~ 4450 2800
+Wire Wire Line
+	3100 2800 1750 2800
+Connection ~ 3100 2800
+Wire Wire Line
+	1750 2800 1750 2550
+Connection ~ 1750 2800
+Wire Wire Line
+	1750 2550 3100 2550
+Connection ~ 1750 2550
+Wire Wire Line
+	3100 2550 4450 2550
+Connection ~ 3100 2550
+Wire Wire Line
+	4450 2550 5800 2550
+Connection ~ 4450 2550
+Wire Wire Line
+	1750 3400 1350 3400
+Wire Wire Line
+	1350 3400 1350 1950
+Wire Wire Line
+	1350 1950 1750 1950
+Wire Wire Line
+	1750 1950 3100 1950
+Connection ~ 1750 1950
+Wire Wire Line
+	3100 1950 4450 1950
+Connection ~ 3100 1950
+Wire Wire Line
+	4450 1950 5800 1950
+Connection ~ 4450 1950
+Wire Wire Line
+	5800 1950 5800 1600
+Connection ~ 5800 1950
+Wire Wire Line
+	5800 1600 4450 1600
+Connection ~ 5800 1600
+Wire Wire Line
+	4450 1600 3100 1600
+Connection ~ 4450 1600
+Wire Wire Line
+	3100 1600 1750 1600
+Connection ~ 3100 1600
+Wire Wire Line
+	5800 2550 6200 2550
+Wire Wire Line
+	6200 2550 6200 1000
+Wire Wire Line
+	6200 1000 5800 1000
+Connection ~ 5800 2550
+Wire Wire Line
+	5800 1000 4450 1000
+Connection ~ 5800 1000
+Wire Wire Line
+	4450 1000 3100 1000
+Connection ~ 4450 1000
+Wire Wire Line
+	3100 1000 1750 1000
+Connection ~ 3100 1000
+Wire Wire Line
+	5800 3400 5800 3600
+Connection ~ 5800 3600
+Wire Wire Line
+	5800 3400 4450 3400
+Connection ~ 5800 3400
+Wire Wire Line
+	4450 3400 3100 3400
+Connection ~ 4450 3400
+Wire Wire Line
+	3100 3400 1750 3400
+Connection ~ 3100 3400
+Connection ~ 1750 3400
+Wire Wire Line
+	6200 4200 8600 4200
+Wire Wire Line
+	8600 4200 8600 3900
+Connection ~ 6200 4200
+Wire Wire Line
+	8600 4200 9350 4200
+Wire Wire Line
+	9350 4200 9350 3050
+Wire Wire Line
+	9350 3050 8600 3050
+Connection ~ 8600 4200
+Wire Wire Line
+	5800 3400 8050 3400
+Wire Wire Line
+	8050 3400 8050 3300
+Wire Wire Line
+	8050 3300 8600 3300
+Wire Wire Line
+	8050 3300 8050 2450
+Wire Wire Line
+	8050 2450 8600 2450
+Connection ~ 8050 3300
+Wire Wire Line
+	6450 2750 8300 2750
+Wire Wire Line
+	8900 2750 8900 3150
+Wire Wire Line
+	8900 3150 8300 3150
+Wire Wire Line
+	8300 3150 8300 3600
+NoConn ~ 8900 3600
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 613AE458
+P 8250 5450
+F 0 "H1" H 8350 5496 50  0000 L CNN
+F 1 "MountingHole" H 8350 5405 50  0000 L CNN
+F 2 "drill_holes:M3_Slot" H 8250 5450 50  0001 C CNN
+F 3 "~" H 8250 5450 50  0001 C CNN
+	1    8250 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 613AE5CD
+P 8250 5700
+F 0 "H2" H 8350 5746 50  0000 L CNN
+F 1 "MountingHole" H 8350 5655 50  0000 L CNN
+F 2 "drill_holes:M3_Slot" H 8250 5700 50  0001 C CNN
+F 3 "~" H 8250 5700 50  0001 C CNN
+	1    8250 5700
+	1    0    0    -1  
+$EndComp
+Connection ~ 5800 6900
+Wire Wire Line
+	4450 6900 5800 6900
+Connection ~ 4450 6900
+Wire Wire Line
+	3100 6900 4450 6900
+Connection ~ 3100 6900
+Connection ~ 1750 6900
+Wire Wire Line
+	1750 6900 3100 6900
+Wire Wire Line
+	2050 5550 2050 4750
+Wire Wire Line
+	1450 4750 1450 3900
+Wire Wire Line
+	1450 6350 1450 5550
+Wire Wire Line
+	2050 6350 2050 7200
+Wire Wire Line
+	2050 3900 2050 3100
+Wire Wire Line
+	1450 3100 1450 2250
+Wire Wire Line
+	2050 2250 2050 1300
+Wire Wire Line
+	1450 1300 1450 900 
+Wire Wire Line
+	1450 900  3400 900 
+Wire Wire Line
+	3400 900  3400 1300
+Wire Wire Line
+	2800 1300 2800 2250
+Wire Wire Line
+	3400 2250 3400 3100
+Wire Wire Line
+	2800 3100 2800 3900
+Wire Wire Line
+	3400 3900 3400 4750
+Wire Wire Line
+	2800 4750 2800 5550
+Wire Wire Line
+	3400 5550 3400 6350
+Wire Wire Line
+	3400 7200 4150 7200
+Wire Wire Line
+	4750 7200 4750 6350
+Wire Wire Line
+	4150 6350 4150 5550
+Wire Wire Line
+	4750 5550 4750 4750
+Wire Wire Line
+	4150 4750 4150 3900
+Wire Wire Line
+	4750 3950 4750 3900
+Connection ~ 4750 3900
+Wire Wire Line
+	4750 3900 4750 3100
+Wire Wire Line
+	4150 3100 4150 2250
+Wire Wire Line
+	4750 2250 4750 1300
+Wire Wire Line
+	4150 1300 4150 900 
+Wire Wire Line
+	4150 900  6100 900 
+Wire Wire Line
+	6100 900  6100 1300
+Wire Wire Line
+	5500 1300 5500 2250
+Wire Wire Line
+	6100 2250 6100 3100
+Wire Wire Line
+	5500 3100 5500 3900
+Wire Wire Line
+	6100 3900 6100 4750
+Wire Wire Line
+	5500 4750 5500 5550
+Wire Wire Line
+	6100 5550 6100 6350
+Wire Wire Line
+	5500 6350 5500 7200
+Wire Wire Line
+	6100 7200 6450 7200
+Wire Wire Line
+	6450 7200 6450 2750
+$Comp
+L Connector:AudioJack2_SwitchT J4
+U 1 1 611896BC
+P 9500 1650
+F 0 "J4" H 9532 1975 50  0000 C CNN
+F 1 "AudioJack2_SwitchT" H 9532 1884 50  0000 C CNN
+F 2 "chillpizza:Jack_3.5mm_QingPu_WQP-PJ3410_Vertical_Top" H 9500 1650 50  0001 C CNN
+F 3 "~" H 9500 1650 50  0001 C CNN
+	1    9500 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J3
+U 1 1 611893F6
+P 9500 950
+F 0 "J3" H 9532 1275 50  0000 C CNN
+F 1 "AudioJack2_SwitchT" H 9532 1184 50  0000 C CNN
+F 2 "chillpizza:Jack_3.5mm_QingPu_WQP-PJ3410_Vertical_Top" H 9500 950 50  0001 C CNN
+F 3 "~" H 9500 950 50  0001 C CNN
+	1    9500 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Rotary_Encoder_Switch SW1
+U 1 1 611886A8
+P 8150 1350
+F 0 "SW1" H 8150 1717 50  0000 C CNN
+F 1 "Rotary_Encoder_Switch" H 8150 1626 50  0000 C CNN
+F 2 "chillpizza:Rotary_Encoder_Switched_PEC11R_top" H 8000 1510 50  0001 C CNN
+F 3 "~" H 8150 1610 50  0001 C CNN
+	1    8150 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x05_Male J1
+U 1 1 61D9914B
+P 10450 5850
+F 0 "J1" H 10558 6231 50  0000 C CNN
+F 1 "Conn_01x05_Male" H 10558 6140 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical_SMD_Pin1Left" H 10450 5850 50  0001 C CNN
+F 3 "~" H 10450 5850 50  0001 C CNN
+	1    10450 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 61D9AF46
+P 10650 6050
+F 0 "#PWR0101" H 10650 5800 50  0001 C CNN
+F 1 "GND" H 10655 5877 50  0000 C CNN
+F 2 "" H 10650 6050 50  0001 C CNN
+F 3 "" H 10650 6050 50  0001 C CNN
+	1    10650 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 61D9C660
+P 9450 4750
+F 0 "#PWR0102" H 9450 4500 50  0001 C CNN
+F 1 "GND" H 9455 4577 50  0000 C CNN
+F 2 "" H 9450 4750 50  0001 C CNN
+F 3 "" H 9450 4750 50  0001 C CNN
+	1    9450 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 61D9CF6C
+P 9450 4300
+F 0 "#PWR0103" H 9450 4050 50  0001 C CNN
+F 1 "GND" H 9455 4127 50  0000 C CNN
+F 2 "" H 9450 4300 50  0001 C CNN
+F 3 "" H 9450 4300 50  0001 C CNN
+	1    9450 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 4750 10750 4750
+Wire Wire Line
+	10750 4750 10750 5750
+Wire Wire Line
+	10750 5750 10650 5750
+Wire Wire Line
+	9850 4300 10850 4300
+Wire Wire Line
+	10850 4300 10850 5850
+Wire Wire Line
+	10850 5850 10650 5850
+Wire Wire Line
+	2800 6350 2800 7200
+$Comp
+L power:VDD #PWR0104
+U 1 1 61E1F8E4
+P 1050 7100
+F 0 "#PWR0104" H 1050 6950 50  0001 C CNN
+F 1 "VDD" H 1067 7273 50  0000 C CNN
+F 2 "" H 1050 7100 50  0001 C CNN
+F 3 "" H 1050 7100 50  0001 C CNN
+	1    1050 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 61E20362
+P 1050 7300
+F 0 "#PWR0105" H 1050 7050 50  0001 C CNN
+F 1 "GND" H 1055 7127 50  0000 C CNN
+F 2 "" H 1050 7300 50  0001 C CNN
+F 3 "" H 1050 7300 50  0001 C CNN
+	1    1050 7300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	850  7200 850  7600
+Wire Wire Line
+	850  7600 6650 7600
+Wire Wire Line
+	6650 7600 6650 6300
+Wire Wire Line
+	6650 6300 10850 6300
+Wire Wire Line
+	10850 6300 10850 5950
+Wire Wire Line
+	10850 5950 10650 5950
+Wire Wire Line
+	850  7200 1450 7200
+$Comp
+L power:VDD #PWR0106
+U 1 1 61E277D0
+P 10650 5650
+F 0 "#PWR0106" H 10650 5500 50  0001 C CNN
+F 1 "VDD" H 10667 5823 50  0000 C CNN
+F 2 "" H 10650 5650 50  0001 C CNN
+F 3 "" H 10650 5650 50  0001 C CNN
+	1    10650 5650
+	1    0    0    -1  
+$EndComp
+NoConn ~ 8450 1250
+NoConn ~ 8450 1450
+NoConn ~ 7850 1450
+NoConn ~ 7850 1350
+NoConn ~ 7850 1250
+NoConn ~ 9700 850 
+NoConn ~ 9700 950 
+NoConn ~ 9700 1050
+NoConn ~ 9700 1550
+NoConn ~ 9700 1650
+NoConn ~ 9700 1750
+$EndSCHEMATC

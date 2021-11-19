@@ -18,7 +18,14 @@ public int LED_Dis = 50;
 public int LED_Trig = 255;
 public int LED_Hue = 0;
 public int LED_Sat = 0;
+//quin's wide screen: 110
+//quin's laptop screen:
+public int ppi = 110;
+float panelPct = (279.0-43.0)/323.0;
+float panelHeightmm = 128.5;
+float panelWidthmm = 20;
 public boolean PlaceLEDs = false;
+PImage panelbg;
 
 ArrayList<PVector> ledPlacement = new ArrayList<PVector>();
 boolean firstActiveClicked = false;
@@ -31,7 +38,8 @@ int triggerMillis = 0;
 int triggerDuration = 50;
 
 void setup() {
-  size(400, 400);
+  size(600, 800);
+  panelbg = loadImage("components/4HP PANEL_01.png");
   control = new ControlP5(this);
   ports = Serial.list();
   control.addScrollableList("Serial_Port")
@@ -43,7 +51,8 @@ void setup() {
     "LED_RowCount", "LED_ColCount",
     "LED_Rot", "LED_RotStep",
     "LED_On", "LED_Off",
-    "LED_Dis", "LED_Trig"
+    "LED_Dis", "LED_Trig",
+    "ppi"
   };
   int y = 5;
   for(int i = 0; i < numbers.length; i++, y+=20){
@@ -86,7 +95,17 @@ int getLedBrightness(int index){
       
 
 void draw() {
-  background(0);
+  colorMode(RGB);
+  background(0xf9, 0xf9, 0xf1);
+  colorMode(HSB);
+  imageMode(CENTER);
+  pushMatrix();
+  float scl = ((ppi/25.4)*(panelWidthmm/panelPct))/panelbg.width;
+  translate(width/2, height/2);
+  scale(scl);
+  image(panelbg, 0, 0);
+  popMatrix();
+  //rect(width/2, height/2, ppi/24.5*panelWidthmm, ppi/24.5*panelHeightmm);
   float currRot = LED_Rot * PI / 180;
   if (PlaceLEDs){
     for(int i = 0; i < ledPlacement.size(); i++, currRot += (LED_RotStep * PI / 180)){
