@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name keyswitches)(type KiCad)(uri /Users/quinkennedy/Documents/me/hardware/libraries/keyswitches.pretty)(options "")(descr ""))
+  (lib (name audiojacks)(type KiCad)(uri /Users/quinkennedy/Documents/me/hardware/libraries/AudioJacks/AudioJacks.pretty)(options "")(descr ""))
+)
