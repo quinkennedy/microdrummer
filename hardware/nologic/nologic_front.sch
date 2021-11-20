@@ -706,24 +706,6 @@ Wire Wire Line
 Wire Wire Line
 	1450 1300 1450 900 
 Wire Wire Line
-	1450 900  3400 900 
-Wire Wire Line
-	3400 900  3400 1300
-Wire Wire Line
-	2800 1300 2800 2250
-Wire Wire Line
-	3400 2250 3400 3100
-Wire Wire Line
-	2800 3100 2800 3900
-Wire Wire Line
-	3400 3900 3400 4750
-Wire Wire Line
-	2800 4750 2800 5550
-Wire Wire Line
-	3400 5550 3400 6350
-Wire Wire Line
-	3400 7200 4150 7200
-Wire Wire Line
 	4750 7200 4750 6350
 Wire Wire Line
 	4150 6350 4150 5550
@@ -742,28 +724,6 @@ Wire Wire Line
 	4750 2250 4750 1300
 Wire Wire Line
 	4150 1300 4150 900 
-Wire Wire Line
-	4150 900  6100 900 
-Wire Wire Line
-	6100 900  6100 1300
-Wire Wire Line
-	5500 1300 5500 2250
-Wire Wire Line
-	6100 2250 6100 3100
-Wire Wire Line
-	5500 3100 5500 3900
-Wire Wire Line
-	6100 3900 6100 4750
-Wire Wire Line
-	5500 4750 5500 5550
-Wire Wire Line
-	6100 5550 6100 6350
-Wire Wire Line
-	5500 6350 5500 7200
-Wire Wire Line
-	6100 7200 6450 7200
-Wire Wire Line
-	6450 7200 6450 2750
 $Comp
 L Connector:AudioJack2_SwitchT J4
 U 1 1 611896BC
@@ -853,8 +813,6 @@ Wire Wire Line
 	10850 4300 10850 5850
 Wire Wire Line
 	10850 5850 10650 5850
-Wire Wire Line
-	2800 6350 2800 7200
 $Comp
 L power:VDD #PWR0104
 U 1 1 61E1F8E4
@@ -913,4 +871,58 @@ NoConn ~ 9700 1050
 NoConn ~ 9700 1550
 NoConn ~ 9700 1650
 NoConn ~ 9700 1750
+Wire Wire Line
+	1450 900  2450 900 
+Wire Wire Line
+	2450 900  2450 7200
+Wire Wire Line
+	2450 7200 2800 7200
+Wire Wire Line
+	3400 7200 3400 6350
+Wire Wire Line
+	2800 6350 2800 5550
+Wire Wire Line
+	3400 5550 3400 4750
+Wire Wire Line
+	2800 4750 2800 3900
+Wire Wire Line
+	3400 3900 3400 3100
+Wire Wire Line
+	2800 3100 2800 2250
+Wire Wire Line
+	3400 2250 3400 1300
+Wire Wire Line
+	2800 1300 2800 900 
+Wire Wire Line
+	2800 900  3800 900 
+Wire Wire Line
+	3800 900  3800 7200
+Wire Wire Line
+	3800 7200 4150 7200
+Wire Wire Line
+	4150 900  5150 900 
+Wire Wire Line
+	5150 900  5150 7200
+Wire Wire Line
+	5150 7200 5500 7200
+Wire Wire Line
+	6100 7200 6100 6350
+Wire Wire Line
+	5500 6350 5500 5550
+Wire Wire Line
+	6100 5550 6100 4750
+Wire Wire Line
+	5500 4750 5500 3900
+Wire Wire Line
+	6100 3900 6100 3100
+Wire Wire Line
+	5500 3100 5500 2250
+Wire Wire Line
+	6100 2250 6100 1300
+Wire Wire Line
+	5500 1300 5500 900 
+Wire Wire Line
+	5500 900  6450 900 
+Wire Wire Line
+	6450 900  6450 2750
 $EndSCHEMATC

@@ -792,7 +792,7 @@ U 1 1 611886A8
 P 8150 1350
 F 0 "SW1" H 8150 1717 50  0000 C CNN
 F 1 "Rotary_Encoder_Switch" H 8150 1626 50  0000 C CNN
-F 2 "Keebio-Parts:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm" H 8000 1510 50  0001 C CNN
+F 2 "chillpizza:Rotary_Encoder_Switched_PEC11R_top" H 8000 1510 50  0001 C CNN
 F 3 "~" H 8150 1610 50  0001 C CNN
 	1    8150 1350
 	1    0    0    -1  
