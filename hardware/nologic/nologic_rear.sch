@@ -19,7 +19,7 @@ U 1 1 611886A8
 P 5650 3900
 F 0 "SW1" H 5650 4267 50  0000 C CNN
 F 1 "Rotary_Encoder_Switch" H 5650 4176 50  0000 C CNN
-F 2 "digikey-footprints:Rotary_Encoder_Switched_PEC11R" H 5500 4060 50  0001 C CNN
+F 2 "chillpizza:Rotary_Encoder_Switched_PEC11R" H 5500 4060 50  0001 C CNN
 F 3 "~" H 5650 4160 50  0001 C CNN
 	1    5650 3900
 	1    0    0    -1  
